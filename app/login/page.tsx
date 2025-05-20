@@ -4,15 +4,15 @@ import { useState } from "react";
 import SignIn from "../../components/signIn/signIn";
 import SignUp from "../../components/signup/signup";
 
-import "../../styles/login.scss";
+import "../../styles/custom.scss";
 
 export default function LoginPage() {
   const [isRightPanelActive, setIsRightPanelActive] = useState(false);
 
   return (
-    <div className="login-container">
+    <div className="container">
       <div
-        className={`login-card ${
+        className={`panel-container ${
           isRightPanelActive ? "right-panel-active" : ""
         }`}
       >
@@ -21,9 +21,15 @@ export default function LoginPage() {
           isRightPanelActive={isRightPanelActive}
           setIsRightPanelActive={setIsRightPanelActive}
         />
-        <div className="overlay-panel">
-          <div className="overlay-gradient">
-            <div className="overlay-signup">
+        <div
+          className={`overlay ${isRightPanelActive ? "-translate-x-full" : ""}`}
+        >
+          <div
+            className={`overlay-content ${
+              isRightPanelActive ? "translate-x-1/2" : ""
+            }`}
+          >
+            <div className={`panel left ${isRightPanelActive ? "active" : ""}`}>
               <h1>Welcome Back!</h1>
               <p>
                 To keep connected with us please login with your personal info
@@ -32,7 +38,7 @@ export default function LoginPage() {
                 Sign In
               </button>
             </div>
-            <div className="overlay-signin">
+            <div className={`panel right ${isRightPanelActive ? "" : ""}`}>
               <h1>Hello, Friend!</h1>
               <p>Enter your personal details and start journey with us</p>
               <button onClick={() => setIsRightPanelActive(true)}>

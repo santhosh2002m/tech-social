@@ -1,82 +1,51 @@
 import { useState } from "react";
-// import "../../styles/signup.scss";
-
-import "../../styles/signup.scss";
+import "../../styles/custom.scss";
 
 export default function SignUp({ isRightPanelActive }) {
   const [showOtpForm, setShowOtpForm] = useState(false);
 
   return (
     <div
-      className={`signup-container ${
-        isRightPanelActive ? "right-panel-active" : ""
-      }`}
+      className={`form-container sign-up ${isRightPanelActive ? "active" : ""}`}
     >
       {!showOtpForm ? (
-        <form className="signup-form">
-          <h1>Sign Up</h1>
-          <input type="text" placeholder="Username" className="signup-input" />
-          <input type="text" placeholder="Full Name" className="signup-input" />
-          <input type="email" placeholder="Email" className="signup-input" />
-          <input
-            type="tel"
-            placeholder="Phone Number"
-            className="signup-input"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="signup-input"
-          />
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            className="signup-input"
-          />
-          <div className="terms-container">
-            <input
-              type="checkbox"
-              id="terms"
-              required
-              className="terms-checkbox"
-            />
-            <label htmlFor="terms" className="terms-label">
-              <span className="terms-text">I agree to the</span>
-              <a href="#" className="terms-link">
+        <form className="form">
+          <h1 className="margin-unset">Sign Up</h1> {/* Corrected typo */}
+          <input type="text" placeholder="Username" />
+          <input type="text" placeholder="Full Name" />
+          <input type="email" placeholder="Email" />
+          <input type="tel" placeholder="Phone Number" />
+          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Confirm Password" />
+          <div className="checkbox-container">
+            <input type="checkbox" id="terms" required />
+            <label htmlFor="terms">
+              <label className="label-flex">I agree to the</label>
+              <a className="label-a" href="#">
                 Terms
               </a>
-              <span className="terms-text">&</span>
-              <a href="#" className="terms-link">
+              <label className="label-flex">&</label>
+              <a className="label-a" href="#">
                 Privacy
               </a>
             </label>
           </div>
-          <div className="signup-button-container">
-            <button
-              type="button"
-              onClick={() => setShowOtpForm(true)}
-              className="signup-button"
-            >
+          <div className="button-group">
+            <button type="button" onClick={() => setShowOtpForm(true)}>
               Request OTP
             </button>
           </div>
         </form>
       ) : (
-        <form className="otp-form">
+        <form className="form">
           <h1>Verify OTP</h1>
-          <p className="otp-text">Enter the OTP received on your email</p>
-          <input type="text" placeholder="Enter OTP" className="otp-input" />
-          <div className="otp-button-container">
-            <button
-              type="button"
-              onClick={() => setShowOtpForm(false)}
-              className="otp-button"
-            >
+          <p className="description">Enter the OTP received on your email</p>
+          <input type="text" placeholder="Enter OTP" />
+          <div className="button-group btn-margin">
+            <button type="button" onClick={() => setShowOtpForm(false)}>
               Back
             </button>
-            <button type="submit" className="otp-button">
-              Verify
-            </button>
+            <button type="submit">Verify</button>
           </div>
         </form>
       )}
