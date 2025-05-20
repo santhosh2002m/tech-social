@@ -40,7 +40,7 @@ export default function RootLayout({
           </>
         )}
       </head>
-      <body className={isLoginPage ? "login-page bg-black" : "app-page"}>
+      <body className={isLoginPage ? "login-page bg-color" : "app-page"}>
         <ThemeProvider attribute="class" enableSystem={false}>
           {!isLoginPage && (
             <>

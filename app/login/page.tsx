@@ -30,18 +30,26 @@ export default function LoginPage() {
             }`}
           >
             <div className={`panel left ${isRightPanelActive ? "active" : ""}`}>
-              <h1>Welcome Back!</h1>
-              <p>
+              <h1 className="black">Welcome Back!</h1>
+              <p className="black">
                 To keep connected with us please login with your personal info
               </p>
-              <button onClick={() => setIsRightPanelActive(false)}>
+              <button
+                className="black black-btn"
+                onClick={() => setIsRightPanelActive(false)}
+              >
                 Sign In
               </button>
             </div>
             <div className={`panel right ${isRightPanelActive ? "" : ""}`}>
-              <h1>Hello, Friend!</h1>
-              <p>Enter your personal details and start journey with us</p>
-              <button onClick={() => setIsRightPanelActive(true)}>
+              <h1 className="black">Hello, Friend!</h1>
+              <p className="black">
+                Enter your personal details and start journey with us
+              </p>
+              <button
+                className="black black-btn"
+                onClick={() => setIsRightPanelActive(true)}
+              >
                 Sign Up
               </button>
             </div>

@@ -20,14 +20,25 @@ export default function SignUp({ isRightPanelActive }) {
           <div className="checkbox-container">
             <input type="checkbox" id="terms" required />
             <label htmlFor="terms">
-              <label className="label-flex">I agree to the</label>
-              <a className="label-a" href="#">
-                Terms
-              </a>
-              <label className="label-flex">&</label>
-              <a className="label-a" href="#">
+              {/* <label className="label-flex">I agree to the</label> */}
+              <p className="custom-style">
+                By Signing up, you are acknowledging that you have read,
+                understood and accept our{" "}
+                <a className="link custom-style-a" href="#">
+                  Terms of Service
+                </a>{" "}
+                and{" "}
+                <a className="link custom-style-a" href="#">
+                  Privacy policy
+                </a>
+              </p>
+              {/* <a className="label-a" href="#"> */}
+              {/* Terms */}
+              {/* </a> */}
+              {/* <label className="label-flex">&</label> */}
+              {/* <a className="label-a" href="#">
                 Privacy
-              </a>
+              </a> */}
             </label>
           </div>
           <div className="button-group">

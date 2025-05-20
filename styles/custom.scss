@@ -11,6 +11,25 @@
   font-weight: 600 !important;
 }
 
+.link {
+  margin: 0 !important;
+}
+
+.custom-style {
+  font-weight: 600 !important;
+}
+
+.custom-style-a {
+  font-weight: 600 !important ;
+  color: #ef623a !important;
+
+  margin-bottom: 0 !important;
+}
+
+.checkbox-container p {
+  margin-bottom: 10px !important;
+}
+
 // Define variables for colors, spacing, etc.
 $primary-dark: #1c2526;
 $gradient-start: #ef623a; // Updated to requested color
@@ -48,12 +67,16 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
+  background-color: #1c2526;
   padding: 1rem; // p-4
 
   @media (min-width: $sm) {
     padding: 1.25rem; // sm:p-5
   }
+}
+
+.bg-color {
+  background-color: #1c2526;
 }
 
 .panel-container {
@@ -251,6 +274,11 @@ body {
     }
   }
 
+  input::placeholder {
+    color: #ef623a !important;
+    font-size: 1rem;
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -258,7 +286,7 @@ body {
     justify-content: center;
     height: 100%;
     width: 100%;
-    background-color: $primary-dark;
+    background-color: black;
     padding: 0 1.25rem; // px-5
     text-align: center;
 
@@ -448,4 +476,12 @@ body {
       }
     }
   }
+}
+
+.black {
+  color: black !important;
+}
+
+.black-btn {
+  border: 1px solid black !important;
 }
