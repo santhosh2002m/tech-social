@@ -12,6 +12,9 @@ import "react-modal-video/css/modal-video.css"; // Use CSS if SCSS is unavailabl
 import "slick-carousel/slick/slick.css";
 import "../styles/globals.scss";
 
+import store from "../store";
+import { Provider } from "react-redux";
+
 export default function RootLayout({
   children,
 }: {
@@ -41,18 +44,20 @@ export default function RootLayout({
         )}
       </head>
       <body className={isLoginPage ? "login-page bg-color" : "app-page"}>
-        <ThemeProvider attribute="class" enableSystem={false}>
-          {!isLoginPage && (
-            <>
-              <Preloader />
-              <ScrollToTop />
-              <NavBar clss={clss} />
-              <BottomMenu />
-              <PostPopups />
-            </>
-          )}
-          {children}
-        </ThemeProvider>
+        <Provider store={store}>
+          <ThemeProvider attribute="class" enableSystem={false}>
+            {!isLoginPage && (
+              <>
+                <Preloader />
+                <ScrollToTop />
+                <NavBar clss={clss} />
+                <BottomMenu />
+                <PostPopups />
+              </>
+            )}
+            {children}
+          </ThemeProvider>
+        </Provider>
       </body>
     </html>
   );
