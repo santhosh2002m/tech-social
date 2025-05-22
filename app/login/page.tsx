@@ -35,7 +35,7 @@ export default function LoginPage() {
                 To keep connected with us please login with your personal info
               </p>
               <button
-                className="black black-btn"
+                className="action-btn"
                 onClick={() => setIsRightPanelActive(false)}
               >
                 Sign In
@@ -47,7 +47,7 @@ export default function LoginPage() {
                 Enter your personal details and start journey with us
               </p>
               <button
-                className="black black-btn"
+                className="action-btn"
                 onClick={() => setIsRightPanelActive(true)}
               >
                 Sign Up

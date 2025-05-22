@@ -52,6 +52,7 @@ export default function SignIn({ isRightPanelActive, setIsRightPanelActive }) {
             value={credential.email}
             type="email"
             placeholder="Email"
+            className="black-bg"
           />
           <input
             name="password"
@@ -59,6 +60,7 @@ export default function SignIn({ isRightPanelActive, setIsRightPanelActive }) {
             type="password"
             placeholder="Password"
             onChange={userSubmitCredential}
+            className="black-bg"
           />
           <a href="#" onClick={() => setShowForgotPassword(true)}>
             Forgot your password?
@@ -83,6 +85,7 @@ export default function SignIn({ isRightPanelActive, setIsRightPanelActive }) {
             onChange={(e) => setForgotPas(e.target.value)}
             type="email"
             placeholder="Email"
+            className="black-bg"
           />
           <div className="button-group btn-margin">
             <button type="button" onClick={() => setShowForgotPassword(false)}>

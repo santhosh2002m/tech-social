@@ -51,6 +51,7 @@ export default function SignUp({ isRightPanelActive }) {
             type="text"
             placeholder="Username"
             onChange={userSubmitProfile}
+            className="black-bg"
           />
           <input
             name="fullname"
@@ -58,6 +59,7 @@ export default function SignUp({ isRightPanelActive }) {
             type="text"
             placeholder="Full Name"
             onChange={userSubmitProfile}
+            className="black-bg"
           />
           <input
             name="email"
@@ -65,6 +67,7 @@ export default function SignUp({ isRightPanelActive }) {
             type="email"
             placeholder="Email"
             onChange={userSubmitProfile}
+            className="black-bg"
           />
           <input
             name="phone"
@@ -72,6 +75,7 @@ export default function SignUp({ isRightPanelActive }) {
             type="tel"
             placeholder="Phone Number"
             onChange={userSubmitProfile}
+            className="black-bg"
           />
           <input
             name="password"
@@ -79,6 +83,7 @@ export default function SignUp({ isRightPanelActive }) {
             type="password"
             placeholder="Password"
             onChange={userSubmitProfile}
+            className="black-bg"
           />
           <input
             name="current_password"
@@ -86,6 +91,7 @@ export default function SignUp({ isRightPanelActive }) {
             type="password"
             placeholder="Confirm Password"
             onChange={userSubmitProfile}
+            className="black-bg"
           />
           <div className="checkbox-container">
             <input type="checkbox" id="terms" required />
@@ -119,7 +125,12 @@ export default function SignUp({ isRightPanelActive }) {
         <form className="form">
           <h1>Verify OTP</h1>
           <p className="description">Enter the OTP received on your email</p>
-          <input value={otp} type="text" placeholder="Enter OTP" />
+          <input
+            className="black-bg"
+            value={otp}
+            type="text"
+            placeholder="Enter OTP"
+          />
           <div className="button-group btn-margin">
             <button type="button" onClick={() => setShowOtpForm(false)}>
               Back
