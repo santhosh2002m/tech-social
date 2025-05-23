@@ -26,15 +26,17 @@ const GroupPostCard = ({ post }: { post: GroupPostProps }) => {
               />
             </div>
             <div className="info-area">
-              <h6 className="m-0">
-                <Link href="/public-profile/post">{author_name}</Link>
-              </h6>
-              <span className="mdtxt status">Active</span>
+              <div className="name-wrapper">
+                <h6 className="m-0">
+                  <Link href="/public-profile/post">{author_name}</Link>
+                </h6>
+                <span className="mdtxt status"></span>{" "}
+                {/* This should be the green dot */}
+                <div className="btn-group cus-dropdown">
+                  <PostAction />
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="btn-group cus-dropdown">
-            {/* Post Action */}
-            <PostAction />
           </div>
         </div>
         <div className="py-4">
