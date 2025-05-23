@@ -1,5 +1,4 @@
-module.exports = {
-  images: {
-    unoptimized: true, // disables Next.js image optimization
-  },
-};
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
+
+module.exports = nextConfig;
